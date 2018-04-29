@@ -7,11 +7,11 @@ import java.util.Set;
 public class Question {
     private int id;
     private String question;
-    private Map<String, String> answers;
+    private Map<Answer, User> answers;
     
     public Question(){}
     
-    public Question(int id, String question, Map<String, String> answers) {
+    public Question(int id, String question, Map<Answer, User> answers) {
         super();
         this.id = id;
         this.question = question;
@@ -22,11 +22,16 @@ public class Question {
         System.out.println("id="+id);
         System.out.println("Question is:"+question);
         System.out.println("Answers are:");
-        Set<Map.Entry<String, String>> set = answers.entrySet();
-        Iterator<Map.Entry<String, String>> it=set.iterator();
+        Set<Map.Entry<Answer, User>> set = answers.entrySet();
+        Iterator<Map.Entry<Answer, User>> it=set.iterator();
         while(it.hasNext()) {
-        	Map.Entry<String, String> entry=it.next();
-            System.out.println("Answer："+entry.getKey()+" Posted by:"+entry.getValue());
+        	Map.Entry<Answer, User> entry=it.next();
+        	Answer answer = entry.getKey();
+        	User user = entry.getValue();
+        	System.out.println("Answer Information:");  
+            System.out.println(answer);  
+            System.out.println("Posted By:");  
+            System.out.println(user); 
         }
     }
 

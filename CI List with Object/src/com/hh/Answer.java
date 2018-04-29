@@ -1,20 +1,25 @@
 package com.hh;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Answer {
     private int id;
-    private String name;
-    private String answeredBy;
+    private String answer;
+    private Date postedDate;
+	private Object answeredBy;
     
     public Answer() {}
     
-    public Answer(int id, String name, String answeredBy) {
+    public Answer(int id, String answer, Date postedDate) {
         super();
         this.id=id;
-        this.name=name;
-        this.answeredBy=answeredBy;
+        this.answer=answer;
+        this.postedDate=postedDate;
     }
     
     public String toString() {
-        return id +" "+name+" "+answeredBy;
+    	SimpleDateFormat ft = new SimpleDateFormat("MM/dd/YYYY");
+    	return "Id:"+id+" Answer:"+answer+" Posted Date:"+ft.format(postedDate); 
     }
 }
