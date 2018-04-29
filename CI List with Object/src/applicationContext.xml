@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans  
  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean id="user1" class="com.hh.User">
+<!-- 	<bean id="user1" class="com.hh.User">
 		<constructor-arg value="1"></constructor-arg>
 		<constructor-arg value="Steven Huang"></constructor-arg>
 		<constructor-arg value="Steven.hwanghh@gmail.com"></constructor-arg>
@@ -40,7 +40,24 @@
 			</map>
 		</constructor-arg>
 
+	</bean> -->
+	
+	<bean id="employee1" class="com.hh.Employee">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="Steven Huang"></constructor-arg>
 	</bean>
-
+	
+	<bean id="address" class="com.hh.Address">
+		<constructor-arg value="44 Dupont Street"></constructor-arg>
+		<constructor-arg value="Toronto"></constructor-arg>
+		<constructor-arg value="Ontario"></constructor-arg>
+		<constructor-arg value="Canada"></constructor-arg>
+	</bean>
+	
+	<bean id="employee2" class="com.hh.Employee" parent="employee1">
+		<constructor-arg>
+			<ref bean="address"/>
+		</constructor-arg>
+	</bean>
 
 </beans>
