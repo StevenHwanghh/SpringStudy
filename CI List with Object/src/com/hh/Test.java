@@ -10,8 +10,10 @@ public class Test {
 //        Question question=(Question)context.getBean("question");
 //        question.displayInfo();
     	
-    	ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        Employee employee = (Employee) context.getBean("employee");
+//    	ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        
+    	ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext1.xml");
+    	Employee employee = (Employee) context.getBean("employee");
         employee.displayInfo();
 
     }
