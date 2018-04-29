@@ -6,10 +6,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test {
 
     public static void main(String[] args) {
-        ApplicationContext context= new ClassPathXmlApplicationContext("applicationContext.xml");
+//        ApplicationContext context= new ClassPathXmlApplicationContext("applicationContext.xml");
 //        Question question=(Question)context.getBean("question");
 //        question.displayInfo();
-        Employee employee = (Employee) context.getBean("employee2");
+    	
+    	ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Employee employee = (Employee) context.getBean("employee");
         employee.displayInfo();
 
     }

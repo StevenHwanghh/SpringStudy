@@ -7,7 +7,6 @@ public class Answer {
     private int id;
     private String answer;
     private Date postedDate;
-	private Object answeredBy;
     
     public Answer() {}
     

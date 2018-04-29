@@ -42,7 +42,7 @@
 
 	</bean> -->
 	
-	<bean id="employee1" class="com.hh.Employee">
+<!-- 	<bean id="employee1" class="com.hh.Employee">
 		<constructor-arg value="1"></constructor-arg>
 		<constructor-arg value="Steven Huang"></constructor-arg>
 	</bean>
@@ -58,6 +58,17 @@
 		<constructor-arg>
 			<ref bean="address"/>
 		</constructor-arg>
-	</bean>
+	</bean> -->
 
+	<bean id="employee" class="com.hh.Employee">
+		<property name="id">
+			<value>7</value>
+		</property>
+		<property name="name">
+			<value>Steven Huang</value>
+		</property>
+		<property name="country">
+			<value>China</value>
+		</property>
+	</bean>
 </beans>
